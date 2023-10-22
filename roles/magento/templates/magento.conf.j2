@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+  ServerName {{ ansible_fqdn }}
+  DocumentRoot /var/www/magento
+
+  <Directory /var/www/magento>
+    AllowOverride All
+  </Directory>
+</VirtualHost>
+

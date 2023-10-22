@@ -1,0 +1,5 @@
+- name: Copier le fichier de configuration MySQL
+  template:
+    src: my.cnf.j2
+    dest: /etc/mysql/my.cnf
+

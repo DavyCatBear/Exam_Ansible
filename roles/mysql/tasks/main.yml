@@ -1,2 +1,6 @@
 ---
-# tasks file for mysql
+- include_tasks: install_mysql.yml
+
+- include_tasks: configure_mysql.yml
+
+- include_tasks: initialize_db.yml

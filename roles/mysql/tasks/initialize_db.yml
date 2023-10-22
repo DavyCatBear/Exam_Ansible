@@ -1,0 +1,5 @@
+- name: Créer la base de données pour Magento
+  mysql_db:
+    name: magento_db
+    state: present
+

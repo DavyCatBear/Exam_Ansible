@@ -1,0 +1,15 @@
+---
+- name: Déployer Magento
+  hosts: magento
+  become: yes
+  
+  roles:
+    - { role: magento, tags: ['magento'] }
+  
+- name: Déployer MySQL
+  hosts: mysql 
+  become: yes
+
+  roles:
+    - { role: mysql, tags: ['mysql'] }
+

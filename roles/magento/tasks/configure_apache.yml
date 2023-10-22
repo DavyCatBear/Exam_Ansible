@@ -1,0 +1,5 @@
+- name: Copier le fichier de configuration Apache pour Magento
+  template:
+    src: magento.conf.j2
+    dest: /etc/apache2/sites-available/magento.conf
+
