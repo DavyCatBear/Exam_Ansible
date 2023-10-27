@@ -1,5 +1,20 @@
-- name: Copier le fichier de configuration MySQL
-  template:
-    src: my.cnf.j2
-    dest: /etc/mysql/my.cnf
+---
+- name: Set MySQL root password
+  mysql_user:
+    name: root
+    password: "{{ mysql_root_password }}"
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+
+- name: Remove anonymous MySQL users
+  mysql_user:
+    name: ''
+    host_all: yes
+    state: absent
+
+- name: Créer un utilisateur MySQL pour Magento
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    priv: "*.*:ALL"
+    state: present
 

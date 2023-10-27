@@ -1,0 +1,17 @@
+---
+- name: Set Magento permissions
+  file:
+    path: "/var/www/magento"
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
+
+- name: Configure Magento to use MySQL database
+  template:
+    src: magento_db_config.j2
+    dest: /var/www/magento/app/etc/env.php
+    owner: www-data
+    group: www-data
+    mode: '0644'
+

@@ -1,0 +1,6 @@
+---
+- name: Télécharger Magento
+  get_url:
+    url: https://github.com/magento/magento2/archive/{{ magento_version }}.tar.gz
+    dest: /tmp/magento2-{{ magento_version }}.tar.gz
+

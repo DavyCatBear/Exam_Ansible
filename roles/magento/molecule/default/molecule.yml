@@ -1,0 +1,15 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: magento_instance
+    image: "geerlingguy/docker-ubuntu2004-ansible:latest"
+    published_ports:
+      - "80:80"
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+

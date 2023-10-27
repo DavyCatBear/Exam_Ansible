@@ -1,5 +1,16 @@
-- name: Copier le fichier de configuration Apache pour Magento
+---
+- name: Disable default Apache site
+  apache2_site:
+    state: disabled
+    name: "000-default"
+
+- name: Copy Magento Apache configuration
   template:
-    src: magento.conf.j2
+    src: magento_apache_config.j2
     dest: /etc/apache2/sites-available/magento.conf
+
+- name: Enable Magento site
+  apache2_site:
+    state: enabled
+    name: magento
 

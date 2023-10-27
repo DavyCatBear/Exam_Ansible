@@ -1,0 +1,6 @@
+---
+- name: Installer Composer
+  apt:
+    name: composer
+    state: present
+

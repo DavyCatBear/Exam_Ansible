@@ -1,2 +1,8 @@
 ---
 # vars file for mysql
+
+
+mysql_user: "davy"
+mysql_password: "root"
+mysql_db: "magento_db"
+

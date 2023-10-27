@@ -1,2 +1,4 @@
----
-# defaults file for magento
+magento_version: "2.4.3"
+magento_admin_user: "admin"
+magento_admin_password: "admin"
+

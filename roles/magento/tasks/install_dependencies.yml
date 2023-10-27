@@ -1,10 +1,19 @@
-- name: Installer les packages nécessaires pour Magento
+---
+- name: Installer les dépendances nécessaires pour Magento
   apt:
     name:
-      - apache2
       - php
-      - libapache2-mod-php
+      - php-cli
+      - php-fpm
+      - php-json
+      - php-common
       - php-mysql
+      - php-zip
+      - php-gd
+      - php-mbstring
+      - php-curl
       - php-xml
+      - php-pear
+      - php-bcmath
     state: present
 

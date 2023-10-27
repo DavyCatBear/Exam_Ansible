@@ -1,2 +1,5 @@
----
-# defaults file for mysql
+mysql_root_password: "admin"
+mysql_db_name: "magento_db"
+mysql_db_user: "admin"
+mysql_db_password: "admin"
+

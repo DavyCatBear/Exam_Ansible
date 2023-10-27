@@ -1,7 +1,6 @@
 ---
-- include_tasks: install_dependencies.yml
-
-- include_tasks: configure_apache.yml
-
-- include_tasks: install_magento.yml
+- include: install_dependencies.yml
+- include: download_magento.yml
+- include: configure_magento.yml
+- include: configure_apache.yml
 
